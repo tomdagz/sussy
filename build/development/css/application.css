@@ -1,0 +1,252 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+  background: #0000FF;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+nav {
+  text-align: center;
+}
+nav ul, nav li {
+  padding: 0;
+}
+nav li {
+  background: #808080;
+}
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+nav a:hover {
+  color: #FFFF00;
+}
+
+.first-row {
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.first-row .first {
+  background: #FFFF00;
+  height: 100%;
+}
+
+.first-row .second {
+  height: 100%;
+}
+
+.first-row .second div {
+  background: #FF7F00;
+  height: 100%;
+}
+
+.pic-gallery div {
+  background: #7F00FF;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.content-bar div {
+  background: #00FF00;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+footer {
+  height: 100px;
+  background: #0000FF;
+  color: #FFFFFF;
+  margin-top: 10px;
+  padding: 10px;
+  clear: both;
+}
+
+header {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+header .logo {
+  width: 9.74576%;
+  float: left;
+  margin-right: 1.69492%;
+}
+header h1 {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+}
+
+.nav {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
+  background-size: 8.47458%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+}
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.nav-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+}
+
+.first-row {
+  clear: both;
+}
+.first-row .first {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.first-row .second {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+}
+.first-row .second div:nth-child(1) {
+  width: 23.07692%;
+  float: left;
+  margin-right: 2.5641%;
+}
+.first-row .second div:nth-child(2) {
+  width: 23.07692%;
+  float: left;
+  margin-right: 2.5641%;
+}
+.first-row .second div:nth-child(3) {
+  width: 23.07692%;
+  float: left;
+  margin-right: 2.5641%;
+}
+.first-row .second div:nth-child(4) {
+  width: 23.07692%;
+  float: right;
+  margin-right: 0;
+}
+.first-row .second div:nth-child(5) {
+  width: 23.07692%;
+  float: right;
+  margin-right: 0;
+}
+
+.pic-gallery {
+  padding: 1.69492%;
+  padding: 0 10px;
+}
+.pic-gallery div {
+  width: 15.25424%;
+  float: left;
+}
+.pic-gallery div:nth-child(6n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.pic-gallery div:nth-child(6n + 2) {
+  margin-left: 16.94915%;
+  margin-right: -100%;
+  clear: none;
+}
+.pic-gallery div:nth-child(6n + 3) {
+  margin-left: 33.89831%;
+  margin-right: -100%;
+  clear: none;
+}
+.pic-gallery div:nth-child(6n + 4) {
+  margin-left: 50.84746%;
+  margin-right: -100%;
+  clear: none;
+}
+.pic-gallery div:nth-child(6n + 5) {
+  margin-left: 67.79661%;
+  margin-right: -100%;
+  clear: none;
+}
+.pic-gallery div:nth-child(6n + 6) {
+  margin-left: 84.74576%;
+  margin-right: -100%;
+  clear: none;
+}
+.pic-gallery div:nth-child(5) {
+  float: right;
+  margin-right: 0;
+}
+
+.content-bar {
+  padding: 0 10px;
+  margin-top: 1.69492%;
+}
+.content-bar div:nth-child(1) {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+@media (max-width: 40em) {
+  .content-bar div:nth-child(1) {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.content-bar div:nth-child(2) {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+}
+@media (max-width: 40em) {
+  .content-bar div:nth-child(2) {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

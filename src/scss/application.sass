@@ -1,0 +1,220 @@
+@import susy
+@import breakpoint
+
+
+$susy: (columns: 12, debug: (image:_show))
+
+
+$main-font-size: 16px
+ 
+$red: #FF0000
+$white: #FFFFFF
+$gray: #808080
+$pink: #FFCBDB
+$brown: #964B00
+$orange: #FF7F00
+$yellow: #FFFF00
+$green: #00FF00
+$cyan: #00FFFF
+$blue: #0000FF
+$violet: #7F00FF
+$black: #000000
+
+html 
+	font-size: $main-font-size
+
+// Use border-box so padding fits in elements width / height
+
+* 
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+$nav_susy_layout: layout(12 0 fluid float inside)
+
+
+header 
+	height: 100px
+	background: $blue
+	color: $white
+	margin-bottom: 10px
+	padding: 10px
+
+.wrapper 
+	background: $white
+	margin: 0 auto
+	max-width: 900px
+
+
+nav 
+	text-align: center
+	ul, li 
+		padding: 0
+  
+	li 
+		background: $gray
+  
+	a 
+		text-decoration: none
+		color: $white
+		&:hover 
+			color: $yellow
+
+.first-row 
+	height: 100px
+	margin-bottom: 10px
+	padding: 10px
+
+.first-row .first
+	background: $yellow
+	height: 100%
+
+
+.first-row .second
+	height: 100%
+
+
+.first-row .second div
+	background: $orange
+	height: 100%
+
+.pic-gallery 
+	div 
+		background: $violet
+		height: 100%
+		margin-bottom: 10px
+		padding: 10px
+
+.content-bar 
+	div 
+		background: $green
+		height: 100%
+		margin-bottom: 10px
+		padding: 10px
+
+footer 
+	height: 100px
+	background: $blue
+	color: $white
+	margin-top: 10px
+	padding: 10px
+	clear: both
+
+// Grid Stuff
+
+header 
+	// Span the entire area available and eliminates floating elements
+	@include full
+
+	// Have the logo take up 1.35 columns
+	// You can add wide or wider to take 1 or 2 gutters in space
+	// span(wide 1.35)
+	.logo 
+		@include span(1.35)
+		// Sass helpers for getting image size
+		//height: image-height("./images/nttlogo.png")
+		//width: image-width("./images/nttlogo.png")
+  
+
+	// Start at the last 2 column point
+	h1 
+		@include span(last 2)
+
+		@include breakpoint((max-width 50em))
+		@include span(last 4)
+
+.nav 
+	@include full
+
+.wrapper 
+	// Return the container that uses the layouts we defined
+	// You could pass in a size container(800px)
+	@include container
+
+
+// Have each nav li item take up 3 columns of the layout with
+// gutters inside
+.nav-item 
+	@include span(3 of $nav_susy_layout)
+
+	// You can add 1 column of margin:
+	// margin-bottom: span(1)
+
+
+.first-row 
+	// No floating elements on the left or right
+	clear: both
+	.first 
+		@include span(first 4)
+
+	.second 
+
+		// Place in last 8 spaces
+		@include span(last 8)
+		
+		div:nth-child(1) 
+
+			// Take up to columns starting at 1st of 8
+			@include span(2 at 1 of 8)
+
+		div:nth-child(2) 
+			@include span(2 at 3 of 8)
+
+		div:nth-child(3) 
+			@include span(2 at 5 of 8)
+
+		div:nth-child(4) 
+			@include span(2 at 7 of 8)
+
+			// Break element to the next row
+			// @include break()
+
+		div:nth-child(5) 
+			@include span(last 2 of 8)
+
+.pic-gallery 
+	//@include clearfix
+
+	// Define the padding by passing the number of columns
+	padding: gutter(12)
+
+	// Add padding on sides
+	padding: 0 10px
+	div 
+		// Take up 2 of every 12 for all 6 pics
+		@include gallery(2 of 12)
+
+	div:nth-child(5) 
+		// Make the element take up the last position
+		@include last()
+
+	div:nth-child(1) 
+		// Make the element take up the last position
+		// Move over 1 column @include pre(1)
+		// Move to the left 1 column with pull(1)
+		// Move content 1 column @include prefix(1)
+		// Move content left 1 column @include suffix(1)
+
+.content-bar 
+	// Add padding on sides
+	padding: 0 10px
+
+	// Return the size of a gutter
+	margin-top: gutter()
+
+	div:nth-child(1)
+		@include span(6 of 12)
+
+		// You can add a specifically sized gutter before, after,
+		// inside, or split
+		@include gutters(3em inside)
+
+		@include breakpoint((max-width 40em))
+			@include span(12 of 12)
+
+
+	div:nth-child(2)
+		@include span(last 6 of 12)
+
+		@include breakpoint((max-width 40em))
+			@include span(12 of 12)
